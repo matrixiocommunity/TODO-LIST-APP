@@ -17,7 +17,7 @@ class TasksTile extends StatelessWidget {
     return ListTile(
       title: Text(
         task,
-        //TODO: add a strike through when the task is done
+        //TODO: added a strike through function when the task is done and when not done it will be shown as it is not any linethrough decoration.
         style: TextStyle(
             decoration: checkBoxState ? TextDecoration.lineThrough : null),
       ),
