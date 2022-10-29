@@ -18,7 +18,8 @@ class TasksTile extends StatelessWidget {
       title: Text(
         task,
         //TODO: add a strike through when the task is done
-        style: TextStyle(decoration: null),
+        style: TextStyle(
+            decoration: checkBoxState ? TextDecoration.lineThrough : null),
       ),
       trailing: Checkbox(
         activeColor: Colors.lightBlueAccent,
@@ -27,6 +28,9 @@ class TasksTile extends StatelessWidget {
           toggleCheckBoxState(newValue);
         },
       ),
+      onLongPress: () {
+        deleteTask();
+      },
     );
   }
 }
